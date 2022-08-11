@@ -24,9 +24,9 @@
             android:gravity="center"
             android:text="Textview"
             android:textColor="#2196F3"
-            android:textSize="34sp"
+            android:textSize="48sp"
             app:layout_constraintEnd_toStartOf="@+id/titulo"
-            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,10 +35,10 @@
             android:layout_width="196dp"
             android:layout_height="39dp"
             android:layout_marginTop="124dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="16dp"
             android:fontFamily="sans-serif-black"
             android:text="Magnitude"
-            android:textSize="24sp"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,7 +88,7 @@
             android:layout_width="36dp"
             android:layout_height="27dp"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             app:srcCompat="@drawable/ic_baseline_warning_24" />
@@ -98,7 +98,7 @@
             android:layout_width="35dp"
             android:layout_height="31dp"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="28dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
             app:srcCompat="@drawable/ic_baseline_access_time_24" />
@@ -109,6 +109,7 @@
             android:layout_height="30dp"
             android:layout_marginStart="12dp"
             android:layout_marginTop="76dp"
+            android:fontFamily="sans-serif-black"
             android:text="TextView"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/titulo" />
@@ -118,6 +119,7 @@
             android:layout_width="163dp"
             android:layout_height="30dp"
             android:layout_marginTop="220dp"
+            android:fontFamily="sans-serif-black"
             android:text="TextView"
             app:layout_constraintBottom_toTopOf="@+id/txt_lugar"
             app:layout_constraintEnd_toEndOf="parent"

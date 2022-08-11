@@ -27,8 +27,8 @@ ActivityInformacionBinding binding;
         binding.txtMagnitud.setText(String.valueOf(sitio.getMagnitude()));
         binding.txtLugar.setText(sitio.getPlace());
         binding.txtTiempo.setText(String.valueOf(sitio.getTime()));
-        binding.txtLong.setText("Longitude: "+String.valueOf(sitio.getLongitude()));
-        binding.txtLat.setText("Latitude: "+String.valueOf(sitio.getLatitude()));
+        binding.txtLong.setText("Longitude: "+String.valueOf(sitio.getLongitude())+"°W");
+        binding.txtLat.setText("Latitude: "+String.valueOf(sitio.getLatitude())+"°N");
 
     }
 }
