@@ -9,14 +9,14 @@ public class Earthquake implements Parcelable {
     private String id;
     private String place;
     private double magnitude;
-    private int time;
+    private long time;
     private double latitude;
     private double longitude;
 
     public Earthquake() {
     }
 
-    public Earthquake(String id, String place, double magnitude, int time, double latitude, double longitude) {
+    public Earthquake(String id, String place, double magnitude, long time, double latitude, double longitude) {
         this.id = id;
         this.place = place;
         this.magnitude = magnitude;
@@ -70,11 +70,11 @@ public class Earthquake implements Parcelable {
         this.magnitude = magnitude;
     }
 
-    public int getTime() {
+    public Long getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(Long time) {
         this.time = time;
     }
 
@@ -117,7 +117,7 @@ public class Earthquake implements Parcelable {
         dest.writeString(id);
         dest.writeString(place);
         dest.writeDouble(magnitude);
-        dest.writeInt(time);
+        dest.writeLong(time);
         dest.writeDouble(latitude);
         dest.writeDouble(longitude);
     }

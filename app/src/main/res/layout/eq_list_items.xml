@@ -29,8 +29,9 @@
 
         <TextView
             android:id="@+id/place_text"
-            android:layout_width="wrap_content"
+            android:layout_width="299dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
             android:layout_toStartOf="@id/arrow_image"
             android:layout_toEndOf="@id/magnitude_text"
             android:fontFamily="sans-serif-medium"
