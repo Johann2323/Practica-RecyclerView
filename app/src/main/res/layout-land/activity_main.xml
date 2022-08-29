@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        //Modf
+
+        <TextView
+            android:id="@+id/titulo3"
+            android:layout_width="169dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="28dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Magnitude"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/txt_mag"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider12"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo3"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider10"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="28dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_time"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_place"
+            android:layout_width="254dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="80dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.916"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/divider10"
+            app:layout_constraintVertical_bias="0.141" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="50dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9"
+            app:srcCompat="@drawable/ic_baseline_warning_24" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="55dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            app:srcCompat="@drawable/ic_baseline_access_time_24" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="252dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="84dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/divider13" />
+
+        <TextView
+            android:id="@+id/txt_longitud"
+            android:layout_width="139dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            tools:layout_editor_absoluteY="101dp" />
+
+        <TextView
+            android:id="@+id/txt_latitud"
+            android:layout_width="169dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/txt_longitud"
+            app:layout_constraintTop_toBottomOf="@+id/divider12" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="47dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="96dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+        <View
+            android:id="@+id/divider13"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_longitud"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eq_recyclear"
+            android:layout_width="313dp"
+            android:layout_height="409dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.069"
+            tools:itemCount="5"
+            tools:listitem="@layout/eq_list_items" />
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="NO SE ENCUENTRAN DATOS"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txt_mag"
+            android:layout_width="188dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="336dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/divider12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

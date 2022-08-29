@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.OrientationEventListener;
 import android.view.View;
 import android.widget.Toast;
 
@@ -24,8 +26,17 @@ ActivityMainBinding binding;
         setContentView(binding.getRoot());
         MainViewModel viewmodel = new ViewModelProvider(this).get(MainViewModel.class);
         binding.eqRecyclear.setLayoutManager(new LinearLayoutManager(this));
+
+
+
+        int orient = getResources().getConfiguration().orientation;
+        System.out.println(orient);
+
+
+
         //modf
         EqAdapter adapter = new EqAdapter();
+
         adapter.setOnItemClickListener(earthquake -> {
             Toast.makeText(MainActivity.this, earthquake.getPlace(), Toast.LENGTH_SHORT).show();
 
@@ -35,12 +46,11 @@ ActivityMainBinding binding;
             long tiempo = earthquake.getTime();
             double latitud = earthquake.getLatitude();
             double longitud = earthquake.getLongitude();
+
             abrirActivityInformacion(id,lugar,magnitud,tiempo,latitud,longitud);
 
         });
         binding.eqRecyclear.setAdapter(adapter);
-
-
         viewmodel.getEqList().observe(this, eqList->{
             adapter.submitList(eqList);
             if (eqList.isEmpty()){
@@ -50,6 +60,37 @@ ActivityMainBinding binding;
             }
         });
         viewmodel.getEarthquakes();
+
+        viewmodel.getEqList().observe(this, eqList->{
+    double magni;
+    double mayor=0;
+            double lat=0;
+            double longi=0;
+            double tiemp=0;
+            String plac="";
+
+            for (int i = 0; i < eqList.size(); i++){
+                System.out.println(eqList.get(i).getMagnitude());
+                magni=eqList.get(i).getMagnitude();
+                if (magni>mayor){
+                    mayor = magni;
+                    lat = eqList.get(i).getLatitude();
+                    longi= eqList.get(i).getLongitude();
+                    tiemp= eqList.get(i).getTime();
+                    plac= eqList.get(i).getPlace();
+
+
+                }
+            }
+
+            System.out.println("el numero mayor es "+ mayor);
+            System.out.println("el numero mayor es "+ longi);
+            System.out.println("el numero mayor es "+ lat);
+            System.out.println("el numero mayor es "+ tiemp);
+            System.out.println("el numero mayor es "+ plac);
+            //binding.txtMag.setText(String.valueOf(mayor));
+
+        });
 
 
     }

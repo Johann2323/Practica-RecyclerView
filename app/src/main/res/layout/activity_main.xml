@@ -13,14 +13,15 @@
         tools:context=".MainActivity">
 
 
-       <androidx.recyclerview.widget.RecyclerView
-           android:id="@+id/eq_recyclear"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           tools:itemCount="5"
-           tools:listitem="@layout/eq_list_items"
-           />
         //Modf
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eq_recyclear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="5"
+            tools:listitem="@layout/eq_list_items" />
+
         <TextView
             android:id="@+id/empty_view"
             android:layout_width="match_parent"

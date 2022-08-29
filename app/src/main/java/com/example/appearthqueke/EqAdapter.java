@@ -89,6 +89,7 @@ public class EqAdapter extends ListAdapter<Earthquake,EqAdapter.EqViewHolder> {
             binding.magnitudeText.setText(String.valueOf(earthquake.getMagnitude()));
             binding.placeText.setText(earthquake.getPlace());
 
+
             //retorna el click
             binding.getRoot().setOnClickListener(v ->{
                 onItemClickListener.onItemClick(earthquake);
@@ -99,4 +100,7 @@ public class EqAdapter extends ListAdapter<Earthquake,EqAdapter.EqViewHolder> {
 
         }
     }
+
+
+
 }
