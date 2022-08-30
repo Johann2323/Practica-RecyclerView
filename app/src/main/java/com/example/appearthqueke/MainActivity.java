@@ -1,11 +1,13 @@
 package com.example.appearthqueke;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.OrientationEventListener;
@@ -15,10 +17,12 @@ import android.widget.Toast;
 import com.example.appearthqueke.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity {
 ActivityMainBinding binding;
     Bitmap bitmap;
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +56,11 @@ ActivityMainBinding binding;
         });
         binding.eqRecyclear.setAdapter(adapter);
         viewmodel.getEqList().observe(this, eqList->{
+
+            Earthquake eqq=eqList.stream().max(Comparator.comparingDouble(Earthquake::getMagnitude)).get();
+
+
+            binding.setEarthquakelandscape(eqq);
             adapter.submitList(eqList);
             if (eqList.isEmpty()){
                 binding.emptyView.setVisibility(View.VISIBLE);
@@ -62,8 +71,8 @@ ActivityMainBinding binding;
         viewmodel.getEarthquakes();
 
         viewmodel.getEqList().observe(this, eqList->{
-    double magni;
-    double mayor=0;
+            double magni;
+            double mayor=0;
             double lat=0;
             double longi=0;
             double tiemp=0;
